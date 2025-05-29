@@ -2,9 +2,10 @@ package main
 
 import (
 	"os"
-	"tasktrack/backend/config"
-	"tasktrack/backend/database"
-	"tasktrack/backend/routes"
+
+	"github.com/NicholasRaynes/tasktrack/backend/config"
+	"github.com/NicholasRaynes/tasktrack/backend/database"
+	"github.com/NicholasRaynes/tasktrack/backend/routes"
 
 	"github.com/gin-gonic/gin"
 )

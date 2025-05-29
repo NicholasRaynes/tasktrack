@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"tasktrack/backend/controllers"
+	"github.com/NicholasRaynes/tasktrack/backend/controllers"
 
 	"github.com/gin-gonic/gin"
 )
