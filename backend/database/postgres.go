@@ -5,6 +5,7 @@ import (
 	"log"
 	"os"
 
+	"github.com/NicholasRaynes/tasktrack/backend/models"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -29,4 +30,6 @@ func Connect() {
 	}
 
 	log.Println("Connected to database ✅")
+
+	DB.AutoMigrate(&models.User{})
 }
