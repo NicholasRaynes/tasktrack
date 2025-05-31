@@ -12,9 +12,15 @@ func RegisterRoutes(r *gin.Engine) {
 	r.POST("/signup", controllers.Signup)
 	r.POST("/login", controllers.Login)
 
+	// Protected routes
 	protected := r.Group("/api")
 	protected.Use(middleware.AuthMiddleware())
-	protected.GET("/profile", func(c *gin.Context) {
-		c.JSON(200, gin.H{"message": "You are authenticated 🎉"})
-	})
+
+	// Project routes
+	protected.POST("/projects", controllers.CreateProject)
+	protected.GET("/projects", controllers.GetProjects)
+
+	// Task routes
+	protected.POST("/tasks", controllers.CreateTask)
+	protected.GET("/tasks", controllers.GetTasks)
 }
