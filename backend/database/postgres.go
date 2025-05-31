@@ -31,5 +31,5 @@ func Connect() {
 
 	log.Println("Connected to database ✅")
 
-	DB.AutoMigrate(&models.User{})
+	DB.AutoMigrate(&models.User{}, &models.Project{}, &models.Task{})
 }
